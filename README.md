@@ -1,14 +1,14 @@
-# SpreadsheetConverter nodejs mongodb form controller
+# SpreadsheetConverter Node.js adaptor for MongoDB
 
 [![N|Solid](http://www.spreadsheetconverter.com/wp-content/uploads/2013/08/logo.png)](http://www.spreadsheetconverter.com)
 
-mongomodulecontroller is a helper module for SpreadsheetConverter nodejs calculator app to connect with your [mongodb](https://www.mongodb.com/). With a small code manpulation at your node calculator app you will easy connect your form to your mongodb.
+mongomodulecontroller is a helper module for SpreadsheetConverter Node.js calculator app to save your form submissions into your [mongodb](https://www.mongodb.com/). With a small code manipulation inside the calculator app, you can easily connect your form to your mongodb.
 
 ### Installation
 
 mongomodulecontroller requires [mongoose.js](http://mongoosejs.com/) to run.
 
-Install the dependencies, mongoose.js in your app.
+Install mongoose.js in your app by typing following in command prompt.
 
 ```sh
 $ cd <your application folder>
@@ -16,8 +16,8 @@ $ npm install mongoose --save
 ```
 ### Usage
 
-Include mongomodulecontroller.js in your node application folder.
-Now you need to edit app.js to handle the form save post request from browser. Open app.js in your editor  and paste this snipplet code 
+Include mongomodulecontroller.js in your Node.js application folder.
+Now you need to edit app.js to handle the form save post request from browser. Open app.js in your editor and paste this snippet code 
 ```sh
 var _db = require('./mongomodalcontroller.js');
 app.post('/postform',function(req,res,next){
@@ -65,8 +65,8 @@ http.createServer(app).listen(config.port||3000);
 ```
 
 That's it, you are done with server part.
-Now come to the final part to edit, yes you are right, Lets give the client side page a server address to post the form.
-Go to views folder and open index.ejs in editor , now at html form tag change the default url : https://www.spreadsheetserver.com/server1/g/submit/submit.aspx to your node server. for testing at your local computer, edit as http://localhost:3000/postform
+Now come to the final part to edit, yes you are right, let's give the client side page a server address to post the form.
+Go to views folder and open index.ejs in editor , now at html form tag, change the default url : https://www.spreadsheetserver.com/server1/g/submit/submit.aspx to your node server. for testing at your local computer, edit as http://localhost:3000/postform
 index.ejs may look similar to this 
 ```sh
 <!DOCTYPE HTML>
@@ -81,7 +81,9 @@ index.ejs may look similar to this
 </html>            
 ```
 
-You are done now, you have configure the SpreadsheetConverter nodejs calculator app to your mongodb database to persist your form.
+You are done now, you have configured the SpreadsheetConverter Node.js calculator app to your mongodb database to persist your form.
 
-start your node app. you are good to go!
+start your node app and you are good to go!
+
+Just hit the Submit button on webpage to test it out!
 
