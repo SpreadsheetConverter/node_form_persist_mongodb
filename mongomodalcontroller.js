@@ -16,7 +16,7 @@ module.exports = {
         var __form = {};
         for (var property in post) {
 
-            if (post.hasOwnProperty(property) && property.indexOf('xl_') === -1) {
+            if ((property in post) && property.indexOf('xl_') === -1) {
                 __form[property] = post[property];
             }
         }
