@@ -4,6 +4,11 @@
 
 mongomodulecontroller is a helper module for SpreadsheetConverter Node.js calculator app to save your form submissions into your [mongodb](https://www.mongodb.com/). With a small code manipulation inside the calculator app, you can easily connect your form to your mongodb.
 
+### Requirement
+This requires the workbook be convert in nodejs flavor with option set in **Configure Submit** Dialog with value "http://localhost:3000/postform" in **I have prepared my own web server to accepts Http POSTs**. 
+
+![configure submit own server](https://github.com/SpreadsheetConverter/node_form_persist_mongodb/blob/master/configure-submit-own-webserver.png)
+
 ### Installation
 
 mongomodulecontroller requires [mongoose.js](http://mongoosejs.com/) to run.
@@ -65,8 +70,8 @@ http.createServer(app).listen(config.port||3000);
 ```
 
 That's it, you are done with server part.
-Now come to the final part to edit, yes you are right, let's give the client side page a server address to post the form.
-Go to views folder and open index.ejs in editor , now at html form tag, change the default url : https://www.spreadsheetserver.com/server1/g/submit/submit.aspx to your node server. for testing at your local computer, edit as http://localhost:3000/postform
+Now come to the final part to edit, yes you are right, let's conform the client side page a server address to post the form.
+Go to views folder and open index.ejs in editor , now at html form tag, in case it has default url : https://www.spreadsheetserver.com/server1/g/submit/submit.aspx change it to your node server, ie http://<myapp.domain-name>/postform. for testing at your local computer, edit as http://localhost:3000/postform
 index.ejs may look similar to this 
 ```sh
 <!DOCTYPE HTML>
