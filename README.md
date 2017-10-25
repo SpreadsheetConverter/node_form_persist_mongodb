@@ -5,7 +5,7 @@
 mongomodulecontroller is a helper module for SpreadsheetConverter Node.js calculator app to save your form submissions into your [mongodb](https://www.mongodb.com/). With a small code manipulation inside the calculator app, you can easily connect your form to your mongodb.
 
 ### Requirement
-This requires the workbook be convert in nodejs flavor with option set in [Configure Submit](http://www.spreadsheetconverter.com/support/online-help/configure-submit/#elementID-7) Dialog with value [http://localhost:3000/postform] in **I have prepared my own web server to accepts Http POSTs**. 
+This requires the workbook be convert in nodejs flavor with option set in [Configure Submit](http://www.spreadsheetconverter.com/support/online-help/configure-submit/#elementID-7) Dialog with value `http://localhost:3000/postform` in **I have prepared my own web server to accepts Http POSTs**. 
 
 ![configure submit own server](https://github.com/SpreadsheetConverter/node_form_persist_mongodb/blob/master/configure-submit-own-webserver.png)
 
